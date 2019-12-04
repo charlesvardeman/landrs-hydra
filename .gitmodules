@@ -1,0 +1,3 @@
+[submodule "fuseki-docker"]
+	path = fuseki-docker
+	url = https://github.com/charlesvardeman/fuseki-docker.git
