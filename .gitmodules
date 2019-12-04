@@ -1,0 +1,3 @@
+[submodule "fuseki-geosparql-docker"]
+	path = fuseki-geosparql-docker
+	url = https://github.com/charlesvardeman/fuseki-geosparql-docker.git
