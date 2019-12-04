@@ -1,0 +1,17 @@
+ld-neonscience:
+    container_name: ld-neonscience
+    build: ./trifid
+    ports:
+      - 80:8080
+    links:
+      - fuseki-neonscience
+
+fuseki-neonscience:
+    container_name: fuseki-neonscience
+    build: ./fuseki-geosparql-docker
+    volumes:
+      - ./data/dronekg.rdf:/jena-fuseki/geosparql_test.rdf
+    ports:
+      - 3030:3030
+    expose:
+      - "3030"
