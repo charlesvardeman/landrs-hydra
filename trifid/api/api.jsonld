@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/hydra/context.jsonld",
+    {
+      "code": "https://code.described.at/",
+      "argList": {
+        "@id": "code:arguments",
+        "@container": "@list"
+      },
+      "code:link": { "@type": "@id" }
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "http://ld.neonscience.org/api",
+      "@type": ["ApiDocumentation", "entrypoint"]
+    }
+  ]
+}
