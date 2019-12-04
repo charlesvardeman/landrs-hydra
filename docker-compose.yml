@@ -1,13 +1,13 @@
-ld-neonscience:
-    container_name: ld-neonscience
+ld-lanrds:
+    container_name: ld-landrs
     build: ./trifid
     ports:
       - 80:8080
     links:
-      - fuseki-neonscience
+      - fuseki-landrs
 
-fuseki-neonscience:
-    container_name: fuseki-neonscience
+fuseki-landrs:
+    container_name: fuseki-landrs
     build: ./fuseki-geosparql-docker
     volumes:
       - ./data/dronekg.rdf:/jena-fuseki/geosparql_test.rdf

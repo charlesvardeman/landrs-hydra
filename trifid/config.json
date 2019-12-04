@@ -1,13 +1,13 @@
 {
     "baseConfig": "trifid:config-sparql.json",
-    "sparqlEndpointUrl": "http://fuseki-neonscience:3030/ds",
-    "datasetBaseUrl": "http://ld.neonscience.org",
+    "sparqlEndpointUrl": "http://fuseki-landrs:3030/ds",
+    "datasetBaseUrl": "http://ld.landrs.org",
     "hydraBox": {
       "api": {
         "documentationUrl": "/api",
         "documentation": "cwd:api/api.jsonld",
         "options": {
-          "sparqlEndpointUrl": "http://fuseki-neonscience:3030/ds",
+          "sparqlEndpointUrl": "http://fuseki-landrs:3030/ds",
           "debug": true,
           "contextHeader": "/context/"
         }
