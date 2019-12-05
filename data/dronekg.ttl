@@ -29,7 +29,7 @@
 
 # Sample Drone Knowledge Graph
 
-<http://ld.landrs.org/this#uav> a drone:UAV ;
+<http://ld.landrs.org/schema/Thing/drone> a drone:UAV ;
 td:title "My Drone Thing" ;
 schema:name "My Drone Thing" ;
 eqp:aircraftSerialNumber "XKFOENGENXWE"@en ;
@@ -38,43 +38,43 @@ schema:Model "Mavic"@en;
 schema:Brand "DJI"@en .
 
 
-<http://ld.landrs.org/this#FLS> a drone:FlightControlSystem ;
-sosa:isHostedBy <http://ld.landrs.org/this#uav> ;
-drone:isPartOf <http://ld.landrs.org/this#uav> .
+<http://ld.landrs.org/schema/Thing/drone/fls> a drone:FlightControlSystem ;
+sosa:isHostedBy <http://ld.landrs.org/Thing/drone> ;
+drone:isPartOf <http://ld.landrs.org/Thing/drone> .
 
-<http://ld.landrs.org/this#Autopilot> a drone:Autopilot ;
-drone:isPartOf <http://ld.landrs.org/this#FLS> ;
+<http://ld.landrs.org/schema/Thing/drone/fls/autopilot> a drone:Autopilot ;
+drone:isPartOf <http://ld.landrs.org/schema/Thing/drone/fls> ;
 rdfs:label "PX4 Drone Autopilot Software"@en ;
 rdfs:comment "IPhone 7 - IMEI 35-207306-844818-0 - John Doe"@en ;
 schema:availableOnDevice "CUAV 5+ Autopilot"@en ;
 schema:SoftwareVersion "1.9.2"@en ;
 schema:Name "PX4 Drone Autopilot"@en ;
 schema:sameAs "https://px4.io/" ;
-drone:runsOn <http://ld.landrs.org/this#FlightControllerBoard> .
+drone:runsOn <http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard> .
 
 
-<http://ld.landrs.org/this#FlightControllerBoard> a drone:FlightControllerBoard ;
-drone:isPartOf <http://ld.landrs.org/this#FLS> ;
+<http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard> a drone:FlightControllerBoard ;
+drone:isPartOf <http://ld.landrs.org/schema/Thing/drone/fls> ;
 rdfs:label "CUAV 5+ Autopilot Board"@en ;
 rdfs:comment "V5+® is an advanced autopilot manufactured by CUAV®. It was designed by CUAV® in collaboration with the PX4 team."@en ;
 schema:sameAs <http://docs.px4.io/master/en/flight_controller/cuav_v5_plus.html> ;
 schema:Model "CUAV 5+"@en ;
-sosa:hosts <sensor/35-207306-844818-0/ICM-20689> ;
-sosa:hosts <sensor/35-207306-844818-0/BMI055> ;
-sosa:hosts <sensor/35-207306-844818-0/IST8310> ;
-sosa:hosts <sensor/35-207306-844818-0/MS5611> ;
-sosa:hosts <actuator/35-207306-844818-0/T5008> .
+sosa:hosts <http://ld.landrs.org/sensor/35-207306-844818-0/ICM-20689> ;
+sosa:hosts <http://ld.landrs.org/sensor/35-207306-844818-0/BMI055> ;
+sosa:hosts <http://ld.landrs.org/sensor/35-207306-844818-0/IST8310> ;
+sosa:hosts <http://ld.landrs.org/sensor/35-207306-844818-0/MS5611> ;
+sosa:hosts <http://ld.landrs.org/actuator/35-207306-844818-0/T5008> .
 
-<sensor/35-207306-844818-0/ICM-20689> a sosa:Sensor ;
+<http://ld.landrs.org/sensor/35-207306-844818-0/ICM-20689> a sosa:Sensor ;
 rdfs:label "TDK ICM-20629 Accelerometer-Gyroscope"@en ;
 rdfs:comment "ICM-20689 is a 6-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer" ;
 schema:sameAs <https://www.invensense.com/products/motion-tracking/6-axis/icm-20689/>;
-sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
+sosa:isHostedBy <http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceDirection/Orientation> ;
 sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 
 
-<sensor/35-207306-844818-0/BMI055> a sosa:Sensor ;
+<http://ld.landrs.org/sensor/35-207306-844818-0/BMI055> a sosa:Sensor ;
 rdfs:label "Bosh Sensortec 6-axis inertial measurement unit"@en ;
 rdfs:comment "THe BMI055 is an ultra-small, 6-axis inertial sensor, consisting of: A digital, triaxial 12bit acceleration sensor and a digital, triaxial 16bit, ±2000°/s gyroscope" ;
 schema:sameAs <https://www.bosch-sensortec.com/bst/products/all_products/bmi055> ;
@@ -82,47 +82,47 @@ sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceDirection/Orientation> ;
 sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 
-<sensor/35-207306-844818-0/IST8310> a sosa:Sensor ;
+<http://ld.landrs.org/sensor/35-207306-844818-0/IST8310> a sosa:Sensor ;
 rdfs:label "iSentek Three-axis Magnetometer" ;
 rdfs:comment "iSentek’s three-axis magnetometers use anisotropic magneto resistance (AMR)technology. They offer high spatial resolution, high precision and low power consumption performance. " ;
 schema:sameAs <http://www.isentek.com/en/the_product.php?pid=4> ;
 sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceLocation/Position> .
 
-<sensor/35-207306-844818-0/MS5611> a sosa:Sensor ;
+<http://ld.landrs.org/sensor/35-207306-844818-0/MS5611> a sosa:Sensor ;
 rdfs:label "MS5611 Altimiter Pressure Sensor" ;
 rdfs:comment "Barometric pressure sensor optimized for altimeters and variometers with an altitude resolution of 10 cm" ;
 schema:sameAs <https://www.te.com/usa-en/product-CAT-BLPS0036.html> ;
-sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
+sosa:isHostedBy <http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceHeight/BarometricAltitude> ;
 ssn-system:hasOperatingRange <sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange> .
 
-<sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange> a ssn-system:OperatingRange ;
+<http://ld.landrs.org/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange> a ssn-system:OperatingRange ;
 rdfs:comment "The conditions in which the MS5611 Altimiter sensor is expected to operate."@en ;
-ssn-system:inCondition <NormalOperatingCondition> , <NormalPressureCondition> .
+ssn-system:inCondition <http://ld.landrs.org/NormalOperatingCondition> , <http://ld.landrs.org/NormalPressureCondition> .
 
-<NormalOperatingCondition> a ssn-system:Condition , schema:PropertyValue ;
+<http://ld.landrs.org/NormalOperatingCondition> a ssn-system:Condition , schema:PropertyValue ;
   rdfs:comment "A temperature range of -40 to 85 Celsius."@en ;
   schema:minValue -40.0 ;
   schema:maxValue 85.0 ;
   schema:unitCode qudt-unit-1-1:DegreeCelsius .
 
-<NormalPressureCondition> a ssn-system:Condition , schema:PropertyValue ;
+<http://ld.landrs.org/NormalPressureCondition> a ssn-system:Condition , schema:PropertyValue ;
   rdfs:comment "A pressure range of 10 to 1200 mbar."@en ;
   schema:minValue 10 ;
   schema:maxValue 1200 ;
   schema:unitCode qudt-unit-1-1:MilliBAR .
 
-<actuator/35-207306-844818-0/T5008> a sosa:Actuator ;
+<http://ld.landrs.org/actuator/35-207306-844818-0/T5008> a sosa:Actuator ;
 rdfs:label "XOAR Titan T5008 Brushless Electric Motor Heavy Lifting Series" ;
 rdfs:comment "XOAR Titan T5000 Brushless Electric Motor Heavy Lifting Series offers all multicopters and drones manufacturers, engineers, pilots and enthusiasts the best performance and reliable propulsion system with XOAR Precision Pair Propellers. XOAR Titan Brushless Electric Motors are specially designed with top grade materials and unique design to work with XOAR Precision Pair Propellers in order to offer the best balance in weight and performance. XOAR Titan T4000 Heavy Lifting Series includes T5008 - KV320, T5010 - KV300, T5012 - KV300, T5015 - KV285 which supports All Up Weight (AUW) for quadcopter, hexacopter, octocopter from min. 6.24 Kg, 9.36 Kg, 12.48 Kg to max. 12.4 Kg, 18.6 Kg and 24.8 Kg respectively. See below for more detailed specs and performance data." ;
 schema:sameAs <https://www.xoarintl.com/brushless-electric-motors/titan/titan-T5000-heavy-lifting-series/> ;
 sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> .
 
-<propeller/35-207306-844818-0/> a drone:Propeller ;
+<http://ld.landrs.org/propeller/35-207306-844818-0/> a drone:Propeller ;
 rdfs:label "Precision Pair Beechwood Propeller w/ Metallic Coating" ;
 schema:sameAs <https://www.xoarintl.com/multicopter-propellers/precision-pair/PJP-N-M-The-Electric-Sword-Percision-Pair/> ;
-drone:isPartOf <actuator/35-207306-844818-0/T5008> .
+drone:isPartOf <http://ld.landrs.org/actuator/35-207306-844818-0/T5008> .
 
 
 [] a sosa:Observation ;
@@ -175,7 +175,7 @@ drone:Propeller  a rdfs:Class ;
 drone:isPartOf drone:Body .
 
 drone:Payload a rdfs:Class ;
-drone:isPartOf drone:UAV .
+drone:isPartOf drone:UxV .
 
 drone:SensorPayload a rdfs:Class ;
 rdfs:label "Sensor Payload" ;
