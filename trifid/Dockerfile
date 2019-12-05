@@ -49,7 +49,7 @@ RUN apt-get update \
 
 # Copy the package.json and install the dependencies
 COPY package*.json ./
-RUN npm install --only=production
+RUN npm install
 COPY . .
 
 # Switch back to dialog for any ad-hoc use of apt-get

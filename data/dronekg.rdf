@@ -1,250 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF xmlns:aero="http://localhost/semantics.aero/pages/swim-vocabulary#" xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#" xmlns:drone="http://schema.landrs.org/" xmlns:envo="http://purl.obolibrary.org/obo/" xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#" xmlns:geoschemas="http://geoschemas.org/" xmlns:geosparql="http://www.opengis.net/ont/geosparql#" xmlns:hydra="http://www.w3.org/ns/hydra/core#" xmlns:ir="http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:qudt-1-1="http://qudt.org/1.1/schema/qudt#" xmlns:qudt-unit-1-1="http://qudt.org/1.1/vocab/unit#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sf="http://www.opengis.net/ont/sf#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:sosa-ext="http://www.w3.org/ns/ssn/ext#" xmlns:sosa="http://www.w3.org/ns/sosa#" xmlns:ssn-system="http://www.w3.org/ns/ssn/systems/" xmlns:ssn="http://www.w3.org/ns/ssn#" xmlns:st="http://www.opengis.net/spec/iot_sensing/1.0/req/" xmlns:step="http://www.purl.org/net/step#" xmlns:td="https://www.w3.org/2019/wot/td#" xmlns:traj="http://w3id.org/daselab/onto/trajectory#">
-  <rdf:Description rdf:about="http://localhost/this#uav">
+<rdf:RDF xmlns:aero="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/semantics.aero/pages/swim-vocabulary#" xmlns:atm="https://data.nasa.gov/ontologies/atmonto/ATM#" xmlns:drone="http://schema.landrs.org/" xmlns:envo="http://purl.obolibrary.org/obo/" xmlns:eqp="https://data.nasa.gov/ontologies/atmonto/equipment#" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:geoschemas="http://geoschemas.org/" xmlns:geosparql="http://www.opengis.net/ont/geosparql#" xmlns:hydra="http://www.w3.org/ns/hydra/core#" xmlns:ir="http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:qudt-1-1="http://qudt.org/1.1/schema/qudt#" xmlns:qudt-unit-1-1="http://qudt.org/1.1/vocab/unit#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:sf="http://www.opengis.net/ont/sf#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:sosa-ext="http://www.w3.org/ns/ssn/ext#" xmlns:sosa="http://www.w3.org/ns/sosa#" xmlns:ssn-system="http://www.w3.org/ns/ssn/systems/" xmlns:ssn="http://www.w3.org/ns/ssn#" xmlns:st="http://www.opengis.net/spec/iot_sensing/1.0/req/" xmlns:step="http://www.purl.org/net/step#" xmlns:td="https://www.w3.org/2019/wot/td#" xmlns:traj="http://w3id.org/daselab/onto/trajectory#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#uav">
     <rdf:type rdf:resource="http://schema.landrs.org/UAV"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#uav">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#uav">
     <td:title>My Drone Thing</td:title>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#uav">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#uav">
     <schema:name>My Drone Thing</schema:name>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#uav">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#uav">
     <eqp:aircraftSerialNumber xml:lang="en">XKFOENGENXWE</eqp:aircraftSerialNumber>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#uav">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#uav">
     <eqp:aircraftTypeDesignator xml:lang="en">Drone</eqp:aircraftTypeDesignator>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#uav">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#uav">
     <schema:Model xml:lang="en">Mavic</schema:Model>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#uav">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#uav">
     <schema:Brand xml:lang="en">DJI</schema:Brand>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FLS">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FLS">
     <rdf:type rdf:resource="http://schema.landrs.org/FlightControlSystem"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FLS">
-    <sosa:isHostedBy rdf:resource="http://localhost/this#uav"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FLS">
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#uav"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FLS">
-    <drone:isPartOf rdf:resource="http://localhost/this#uav"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FLS">
+    <drone:isPartOf rdf:resource="http://ld.landrs.org/this#uav"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
     <rdf:type rdf:resource="http://schema.landrs.org/Autopilot"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
-    <drone:isPartOf rdf:resource="http://localhost/this#FLS"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
+    <drone:isPartOf rdf:resource="http://ld.landrs.org/this#FLS"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
     <rdfs:label xml:lang="en">PX4 Drone Autopilot Software</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
     <rdfs:comment xml:lang="en">IPhone 7 - IMEI 35-207306-844818-0 - John Doe</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
     <schema:availableOnDevice xml:lang="en">CUAV 5+ Autopilot</schema:availableOnDevice>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
     <schema:SoftwareVersion xml:lang="en">1.9.2</schema:SoftwareVersion>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
     <schema:Name xml:lang="en">PX4 Drone Autopilot</schema:Name>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
     <schema:sameAs>https://px4.io/</schema:sameAs>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#Autopilot">
-    <drone:runsOn rdf:resource="http://localhost/this#FlightControllerBoard"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#Autopilot">
+    <drone:runsOn rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
     <rdf:type rdf:resource="http://schema.landrs.org/FlightControllerBoard"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
-    <drone:isPartOf rdf:resource="http://localhost/this#FLS"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
+    <drone:isPartOf rdf:resource="http://ld.landrs.org/this#FLS"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
     <rdfs:label xml:lang="en">CUAV 5+ Autopilot Board</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
     <rdfs:comment xml:lang="en">V5+® is an advanced autopilot manufactured by CUAV®. It was designed by CUAV® in collaboration with the PX4 team.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
     <schema:sameAs rdf:resource="http://docs.px4.io/master/en/flight_controller/cuav_v5_plus.html"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
     <schema:Model xml:lang="en">CUAV 5+</schema:Model>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
-    <sosa:hosts rdf:resource="http://localhost/sensor/35-207306-844818-0/ICM-20689"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
+    <sosa:hosts rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/ICM-20689"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
-    <sosa:hosts rdf:resource="http://localhost/sensor/35-207306-844818-0/BMI055"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
+    <sosa:hosts rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/BMI055"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
-    <sosa:hosts rdf:resource="http://localhost/sensor/35-207306-844818-0/IST8310"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
+    <sosa:hosts rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/IST8310"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
-    <sosa:hosts rdf:resource="http://localhost/sensor/35-207306-844818-0/MS5611"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
+    <sosa:hosts rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/this#FlightControllerBoard">
-    <sosa:hosts rdf:resource="http://localhost/actuator/35-207306-844818-0/T5008"/>
+  <rdf:Description rdf:about="http://ld.landrs.org/this#FlightControllerBoard">
+    <sosa:hosts rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/actuator/35-207306-844818-0/T5008"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/ICM-20689">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/ICM-20689">
     <rdf:type rdf:resource="http://www.w3.org/ns/sosa#Sensor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/ICM-20689">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/ICM-20689">
     <rdfs:label xml:lang="en">TDK ICM-20629 Accelerometer-Gyroscope</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/ICM-20689">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/ICM-20689">
     <rdfs:comment>ICM-20689 is a 6-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/ICM-20689">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/ICM-20689">
     <schema:sameAs rdf:resource="https://www.invensense.com/products/motion-tracking/6-axis/icm-20689/"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/ICM-20689">
-    <sosa:isHostedBy rdf:resource="http://localhost/this#FlightControllerBoard"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/ICM-20689">
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/ICM-20689">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/ICM-20689">
     <sosa:observableProperty rdf:resource="http://sweetontology.net/propSpaceDirection/Orientation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/ICM-20689">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/ICM-20689">
     <sosa:observableProperty rdf:resource="http://sweetontology.net/propSpeed/Acceleration"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/BMI055">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/BMI055">
     <rdf:type rdf:resource="http://www.w3.org/ns/sosa#Sensor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/BMI055">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/BMI055">
     <rdfs:label xml:lang="en">Bosh Sensortec 6-axis inertial measurement unit</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/BMI055">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/BMI055">
     <rdfs:comment>THe BMI055 is an ultra-small, 6-axis inertial sensor, consisting of: A digital, triaxial 12bit acceleration sensor and a digital, triaxial 16bit, ±2000°/s gyroscope</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/BMI055">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/BMI055">
     <schema:sameAs rdf:resource="https://www.bosch-sensortec.com/bst/products/all_products/bmi055"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/BMI055">
-    <sosa:isHostedBy rdf:resource="http://localhost/this#FlightControllerBoard"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/BMI055">
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/BMI055">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/BMI055">
     <sosa:observableProperty rdf:resource="http://sweetontology.net/propSpaceDirection/Orientation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/BMI055">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/BMI055">
     <sosa:observableProperty rdf:resource="http://sweetontology.net/propSpeed/Acceleration"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/IST8310">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/IST8310">
     <rdf:type rdf:resource="http://www.w3.org/ns/sosa#Sensor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/IST8310">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/IST8310">
     <rdfs:label>iSentek Three-axis Magnetometer</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/IST8310">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/IST8310">
     <rdfs:comment>iSentek’s three-axis magnetometers use anisotropic magneto resistance (AMR)technology. They offer high spatial resolution, high precision and low power consumption performance. </rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/IST8310">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/IST8310">
     <schema:sameAs rdf:resource="http://www.isentek.com/en/the_product.php?pid=4"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/IST8310">
-    <sosa:isHostedBy rdf:resource="http://localhost/this#FlightControllerBoard"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/IST8310">
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/IST8310">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/IST8310">
     <sosa:observableProperty rdf:resource="http://sweetontology.net/propSpaceLocation/Position"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611">
     <rdf:type rdf:resource="http://www.w3.org/ns/sosa#Sensor"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611">
     <rdfs:label>MS5611 Altimiter Pressure Sensor</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611">
     <rdfs:comment>Barometric pressure sensor optimized for altimeters and variometers with an altitude resolution of 10 cm</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611">
     <schema:sameAs rdf:resource="https://www.te.com/usa-en/product-CAT-BLPS0036.html"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611">
-    <sosa:isHostedBy rdf:resource="http://localhost/this#FlightControllerBoard"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611">
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611">
     <sosa:observableProperty rdf:resource="http://sweetontology.net/propSpaceHeight/BarometricAltitude"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611">
-    <ssn-system:hasOperatingRange rdf:resource="http://localhost/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611">
+    <ssn-system:hasOperatingRange rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange">
     <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/OperatingRange"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange">
     <rdfs:comment xml:lang="en">The conditions in which the MS5611 Altimiter sensor is expected to operate.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange">
-    <ssn-system:inCondition rdf:resource="http://localhost/NormalOperatingCondition"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange">
+    <ssn-system:inCondition rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalOperatingCondition"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange">
-    <ssn-system:inCondition rdf:resource="http://localhost/NormalPressureCondition"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange">
+    <ssn-system:inCondition rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalPressureCondition"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalOperatingCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalOperatingCondition">
     <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Condition"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalOperatingCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalOperatingCondition">
     <rdf:type rdf:resource="http://schema.org/PropertyValue"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalOperatingCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalOperatingCondition">
     <rdfs:comment xml:lang="en">A temperature range of -40 to 85 Celsius.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalOperatingCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalOperatingCondition">
     <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-40.0</schema:minValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalOperatingCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalOperatingCondition">
     <schema:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">85.0</schema:maxValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalOperatingCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalOperatingCondition">
     <schema:unitCode rdf:resource="http://qudt.org/1.1/vocab/unit#DegreeCelsius"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalPressureCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalPressureCondition">
     <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Condition"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalPressureCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalPressureCondition">
     <rdf:type rdf:resource="http://schema.org/PropertyValue"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalPressureCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalPressureCondition">
     <rdfs:comment xml:lang="en">A pressure range of 10 to 1200 mbar.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalPressureCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalPressureCondition">
     <schema:minValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</schema:minValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalPressureCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalPressureCondition">
     <schema:maxValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</schema:maxValue>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/NormalPressureCondition">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/NormalPressureCondition">
     <schema:unitCode rdf:resource="http://qudt.org/1.1/vocab/unit#MilliBAR"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/actuator/35-207306-844818-0/T5008">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/actuator/35-207306-844818-0/T5008">
     <rdf:type rdf:resource="http://www.w3.org/ns/sosa#Actuator"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/actuator/35-207306-844818-0/T5008">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/actuator/35-207306-844818-0/T5008">
     <rdfs:label>XOAR Titan T5008 Brushless Electric Motor Heavy Lifting Series</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/actuator/35-207306-844818-0/T5008">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/actuator/35-207306-844818-0/T5008">
     <rdfs:comment>XOAR Titan T5000 Brushless Electric Motor Heavy Lifting Series offers all multicopters and drones manufacturers, engineers, pilots and enthusiasts the best performance and reliable propulsion system with XOAR Precision Pair Propellers. XOAR Titan Brushless Electric Motors are specially designed with top grade materials and unique design to work with XOAR Precision Pair Propellers in order to offer the best balance in weight and performance. XOAR Titan T4000 Heavy Lifting Series includes T5008 - KV320, T5010 - KV300, T5012 - KV300, T5015 - KV285 which supports All Up Weight (AUW) for quadcopter, hexacopter, octocopter from min. 6.24 Kg, 9.36 Kg, 12.48 Kg to max. 12.4 Kg, 18.6 Kg and 24.8 Kg respectively. See below for more detailed specs and performance data.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/actuator/35-207306-844818-0/T5008">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/actuator/35-207306-844818-0/T5008">
     <schema:sameAs rdf:resource="https://www.xoarintl.com/brushless-electric-motors/titan/titan-T5000-heavy-lifting-series/"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/actuator/35-207306-844818-0/T5008">
-    <sosa:isHostedBy rdf:resource="http://localhost/this#FlightControllerBoard"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/actuator/35-207306-844818-0/T5008">
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/propeller/35-207306-844818-0/">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/propeller/35-207306-844818-0/">
     <rdf:type rdf:resource="http://schema.landrs.org/Propeller"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/propeller/35-207306-844818-0/">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/propeller/35-207306-844818-0/">
     <rdfs:label>Precision Pair Beechwood Propeller w/ Metallic Coating</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/propeller/35-207306-844818-0/">
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/propeller/35-207306-844818-0/">
     <schema:sameAs rdf:resource="https://www.xoarintl.com/multicopter-propellers/precision-pair/PJP-N-M-The-Electric-Sword-Percision-Pair/"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://localhost/propeller/35-207306-844818-0/">
-    <drone:isPartOf rdf:resource="http://localhost/actuator/35-207306-844818-0/T5008"/>
+  <rdf:Description rdf:about="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/propeller/35-207306-844818-0/">
+    <drone:isPartOf rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/actuator/35-207306-844818-0/T5008"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:type rdf:resource="http://qudt.org/1.1/schema/qudt#QuantityValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <qudt-1-1:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">92.998761214</qudt-1-1:numericValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/sosa#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.2956875118</geo:lat>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-83.2387876583</geo:long>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <sosa:PhenomenonTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-19 07:57:04</sosa:PhenomenonTime>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <sosa:hasFeatureOfInterest rdf:nodeID="N752bbb325e8742029ab6a789ff642590"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <sosa:hasResult rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <sosa:madeBySensor rdf:nodeID="Na1f49308d5b4491dadf6726a9cbcb42e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <sosa:observedProperty rdf:resource="http://genivi.org/ns/vss#Speed"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://geoschemas.org/ResearchSite">
     <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
@@ -343,7 +373,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.landrs.org/Autopilot">
-    <rdfs:subClassOf rdf:resource="http://localhost/semantics.aero/pages/swim-vocabulary#software-agent"/>
+    <rdfs:subClassOf rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/semantics.aero/pages/swim-vocabulary#software-agent"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.landrs.org/Autopilot">
     <rdfs:subClassOf rdf:resource="https://data.nasa.gov/ontologies/atmonto/equipment#AircraftNavigationSystem"/>
@@ -412,7 +442,7 @@
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.landrs.org/hasPart">
-    <rdfs:isDefinedBy rdf:resource="http://localhost/this"/>
+    <rdfs:isDefinedBy rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/dronekg.ttl"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.landrs.org/hasPart">
     <rdfs:label xml:lang="en">has part</rdfs:label>
@@ -439,7 +469,7 @@
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.landrs.org/isPartOf">
-    <rdfs:isDefinedBy rdf:resource="http://localhost/this"/>
+    <rdfs:isDefinedBy rdf:resource="file:///Users/cvardema/Work/research/hydra/landrs-hydra/data/dronekg.ttl"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.landrs.org/isPartOf">
     <rdfs:label xml:lang="en">is part of</rdfs:label>

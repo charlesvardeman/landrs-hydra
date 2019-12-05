@@ -1,4 +1,3 @@
-@base <http://localhost/this> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -24,11 +23,13 @@
 @prefix aero: <semantics.aero/pages/swim-vocabulary#> .
 @prefix traj: <http://w3id.org/daselab/onto/trajectory#> .
 @prefix step: <http://www.purl.org/net/step#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
 # Sample Drone Knowledge Graph
 
-<http://localhost/this#uav> a drone:UAV ;
+<http://ld.landrs.org/this#uav> a drone:UAV ;
 td:title "My Drone Thing" ;
 schema:name "My Drone Thing" ;
 eqp:aircraftSerialNumber "XKFOENGENXWE"@en ;
@@ -37,23 +38,23 @@ schema:Model "Mavic"@en;
 schema:Brand "DJI"@en .
 
 
-<http://localhost/this#FLS> a drone:FlightControlSystem ;
-sosa:isHostedBy <http://localhost/this#uav> ;
-drone:isPartOf <http://localhost/this#uav> .
+<http://ld.landrs.org/this#FLS> a drone:FlightControlSystem ;
+sosa:isHostedBy <http://ld.landrs.org/this#uav> ;
+drone:isPartOf <http://ld.landrs.org/this#uav> .
 
-<http://localhost/this#Autopilot> a drone:Autopilot ;
-drone:isPartOf <http://localhost/this#FLS> ;
+<http://ld.landrs.org/this#Autopilot> a drone:Autopilot ;
+drone:isPartOf <http://ld.landrs.org/this#FLS> ;
 rdfs:label "PX4 Drone Autopilot Software"@en ;
 rdfs:comment "IPhone 7 - IMEI 35-207306-844818-0 - John Doe"@en ;
 schema:availableOnDevice "CUAV 5+ Autopilot"@en ;
 schema:SoftwareVersion "1.9.2"@en ;
 schema:Name "PX4 Drone Autopilot"@en ;
 schema:sameAs "https://px4.io/" ;
-drone:runsOn <http://localhost/this#FlightControllerBoard> .
+drone:runsOn <http://ld.landrs.org/this#FlightControllerBoard> .
 
 
-<http://localhost/this#FlightControllerBoard> a drone:FlightControllerBoard ;
-drone:isPartOf <http://localhost/this#FLS> ;
+<http://ld.landrs.org/this#FlightControllerBoard> a drone:FlightControllerBoard ;
+drone:isPartOf <http://ld.landrs.org/this#FLS> ;
 rdfs:label "CUAV 5+ Autopilot Board"@en ;
 rdfs:comment "V5+® is an advanced autopilot manufactured by CUAV®. It was designed by CUAV® in collaboration with the PX4 team."@en ;
 schema:sameAs <http://docs.px4.io/master/en/flight_controller/cuav_v5_plus.html> ;
@@ -68,7 +69,7 @@ sosa:hosts <actuator/35-207306-844818-0/T5008> .
 rdfs:label "TDK ICM-20629 Accelerometer-Gyroscope"@en ;
 rdfs:comment "ICM-20689 is a 6-axis MotionTracking device that combines a 3-axis gyroscope, 3-axis accelerometer" ;
 schema:sameAs <https://www.invensense.com/products/motion-tracking/6-axis/icm-20689/>;
-sosa:isHostedBy <http://localhost/this#FlightControllerBoard> ;
+sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceDirection/Orientation> ;
 sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 
@@ -77,7 +78,7 @@ sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 rdfs:label "Bosh Sensortec 6-axis inertial measurement unit"@en ;
 rdfs:comment "THe BMI055 is an ultra-small, 6-axis inertial sensor, consisting of: A digital, triaxial 12bit acceleration sensor and a digital, triaxial 16bit, ±2000°/s gyroscope" ;
 schema:sameAs <https://www.bosch-sensortec.com/bst/products/all_products/bmi055> ;
-sosa:isHostedBy <http://localhost/this#FlightControllerBoard> ;
+sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceDirection/Orientation> ;
 sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 
@@ -85,14 +86,14 @@ sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 rdfs:label "iSentek Three-axis Magnetometer" ;
 rdfs:comment "iSentek’s three-axis magnetometers use anisotropic magneto resistance (AMR)technology. They offer high spatial resolution, high precision and low power consumption performance. " ;
 schema:sameAs <http://www.isentek.com/en/the_product.php?pid=4> ;
-sosa:isHostedBy <http://localhost/this#FlightControllerBoard> ;
+sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceLocation/Position> .
 
 <sensor/35-207306-844818-0/MS5611> a sosa:Sensor ;
 rdfs:label "MS5611 Altimiter Pressure Sensor" ;
 rdfs:comment "Barometric pressure sensor optimized for altimeters and variometers with an altitude resolution of 10 cm" ;
 schema:sameAs <https://www.te.com/usa-en/product-CAT-BLPS0036.html> ;
-sosa:isHostedBy <http://localhost/this#FlightControllerBoard> ;
+sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceHeight/BarometricAltitude> ;
 ssn-system:hasOperatingRange <sensor/35-207306-844818-0/MS5611#AltimiterOperatingRange> .
 
@@ -116,7 +117,7 @@ ssn-system:inCondition <NormalOperatingCondition> , <NormalPressureCondition> .
 rdfs:label "XOAR Titan T5008 Brushless Electric Motor Heavy Lifting Series" ;
 rdfs:comment "XOAR Titan T5000 Brushless Electric Motor Heavy Lifting Series offers all multicopters and drones manufacturers, engineers, pilots and enthusiasts the best performance and reliable propulsion system with XOAR Precision Pair Propellers. XOAR Titan Brushless Electric Motors are specially designed with top grade materials and unique design to work with XOAR Precision Pair Propellers in order to offer the best balance in weight and performance. XOAR Titan T4000 Heavy Lifting Series includes T5008 - KV320, T5010 - KV300, T5012 - KV300, T5015 - KV285 which supports All Up Weight (AUW) for quadcopter, hexacopter, octocopter from min. 6.24 Kg, 9.36 Kg, 12.48 Kg to max. 12.4 Kg, 18.6 Kg and 24.8 Kg respectively. See below for more detailed specs and performance data." ;
 schema:sameAs <https://www.xoarintl.com/brushless-electric-motors/titan/titan-T5000-heavy-lifting-series/> ;
-sosa:isHostedBy <http://localhost/this#FlightControllerBoard> .
+sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> .
 
 <propeller/35-207306-844818-0/> a drone:Propeller ;
 rdfs:label "Precision Pair Beechwood Propeller w/ Metallic Coating" ;
@@ -124,7 +125,15 @@ schema:sameAs <https://www.xoarintl.com/multicopter-propellers/precision-pair/PJ
 drone:isPartOf <actuator/35-207306-844818-0/T5008> .
 
 
-
+[] a sosa:Observation ;
+    geo:lat "42.2956875118"^^xsd:double ;
+    geo:long "-83.2387876583"^^xsd:double ;
+    sosa:PhenomenonTime "2017-12-19 07:57:04"^^xsd:dateTime ;
+    sosa:hasFeatureOfInterest _:N752bbb325e8742029ab6a789ff642590 ;
+    sosa:hasResult [ a qudt-1-1:QuantityValue ;
+            qudt-1-1:numericValue "92.998761214"^^xsd:double ] ;
+    sosa:madeBySensor _:Na1f49308d5b4491dadf6726a9cbcb42e ;
+    sosa:observedProperty <http://genivi.org/ns/vss#Speed> .
 
 
 
