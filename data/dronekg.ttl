@@ -78,7 +78,7 @@ sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 rdfs:label "Bosh Sensortec 6-axis inertial measurement unit"@en ;
 rdfs:comment "THe BMI055 is an ultra-small, 6-axis inertial sensor, consisting of: A digital, triaxial 12bit acceleration sensor and a digital, triaxial 16bit, ±2000°/s gyroscope" ;
 schema:sameAs <https://www.bosch-sensortec.com/bst/products/all_products/bmi055> ;
-sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
+sosa:isHostedBy <http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceDirection/Orientation> ;
 sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 
@@ -86,7 +86,7 @@ sosa:observableProperty <http://sweetontology.net/propSpeed/Acceleration> .
 rdfs:label "iSentek Three-axis Magnetometer" ;
 rdfs:comment "iSentek’s three-axis magnetometers use anisotropic magneto resistance (AMR)technology. They offer high spatial resolution, high precision and low power consumption performance. " ;
 schema:sameAs <http://www.isentek.com/en/the_product.php?pid=4> ;
-sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> ;
+sosa:isHostedBy <http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard> ;
 sosa:observableProperty <http://sweetontology.net/propSpaceLocation/Position> .
 
 <http://ld.landrs.org/sensor/35-207306-844818-0/MS5611> a sosa:Sensor ;
@@ -117,7 +117,7 @@ ssn-system:inCondition <http://ld.landrs.org/NormalOperatingCondition> , <http:/
 rdfs:label "XOAR Titan T5008 Brushless Electric Motor Heavy Lifting Series" ;
 rdfs:comment "XOAR Titan T5000 Brushless Electric Motor Heavy Lifting Series offers all multicopters and drones manufacturers, engineers, pilots and enthusiasts the best performance and reliable propulsion system with XOAR Precision Pair Propellers. XOAR Titan Brushless Electric Motors are specially designed with top grade materials and unique design to work with XOAR Precision Pair Propellers in order to offer the best balance in weight and performance. XOAR Titan T4000 Heavy Lifting Series includes T5008 - KV320, T5010 - KV300, T5012 - KV300, T5015 - KV285 which supports All Up Weight (AUW) for quadcopter, hexacopter, octocopter from min. 6.24 Kg, 9.36 Kg, 12.48 Kg to max. 12.4 Kg, 18.6 Kg and 24.8 Kg respectively. See below for more detailed specs and performance data." ;
 schema:sameAs <https://www.xoarintl.com/brushless-electric-motors/titan/titan-T5000-heavy-lifting-series/> ;
-sosa:isHostedBy <http://ld.landrs.org/this#FlightControllerBoard> .
+sosa:isHostedBy <http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard> .
 
 <http://ld.landrs.org/propeller/35-207306-844818-0/> a drone:Propeller ;
 rdfs:label "Precision Pair Beechwood Propeller w/ Metallic Coating" ;

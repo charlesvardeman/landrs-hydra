@@ -124,7 +124,7 @@
     <schema:sameAs rdf:resource="https://www.bosch-sensortec.com/bst/products/all_products/bmi055"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://ld.landrs.org/sensor/35-207306-844818-0/BMI055">
-    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://ld.landrs.org/sensor/35-207306-844818-0/BMI055">
     <sosa:observableProperty rdf:resource="http://sweetontology.net/propSpaceDirection/Orientation"/>
@@ -145,7 +145,7 @@
     <schema:sameAs rdf:resource="http://www.isentek.com/en/the_product.php?pid=4"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://ld.landrs.org/sensor/35-207306-844818-0/IST8310">
-    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://ld.landrs.org/sensor/35-207306-844818-0/IST8310">
     <sosa:observableProperty rdf:resource="http://sweetontology.net/propSpaceLocation/Position"/>
@@ -232,7 +232,7 @@
     <schema:sameAs rdf:resource="https://www.xoarintl.com/brushless-electric-motors/titan/titan-T5000-heavy-lifting-series/"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://ld.landrs.org/actuator/35-207306-844818-0/T5008">
-    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/this#FlightControllerBoard"/>
+    <sosa:isHostedBy rdf:resource="http://ld.landrs.org/schema/Thing/drone/fls/FlightControllerBoard"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://ld.landrs.org/propeller/35-207306-844818-0/">
     <rdf:type rdf:resource="http://schema.landrs.org/Propeller"/>
