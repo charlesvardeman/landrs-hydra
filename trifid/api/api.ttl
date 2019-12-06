@@ -5,6 +5,7 @@
 @prefix drone: <http://schema.landrs.org/> .
 @prefix api: <http://ld.landrs.org/api#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa#> .
 
 # Based loosely off of https://github.com/zazuko/data-cube-curation/blob/master/api/hydra/api.ttl
 
